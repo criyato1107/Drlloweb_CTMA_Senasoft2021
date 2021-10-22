@@ -4,7 +4,7 @@ $accion = @$_POST['accion'];
 if ($accion == "Jugar") {
     include 'iniciocontroller.php';
 } else if ($accion == "IR") {
-    include 'espera.php';
+    include 'unirmecontroller.php';
 }
 
 //funcion para generar el codigo hexadecimal
@@ -75,7 +75,7 @@ function hexadecimal($caracteres)
             <div>
 <!--SI ESTA BUSCANDO UNIRSE A UNA SALA INGRESAR POR ES LUGAR--->
                 <h3>Unirme a Partida</h3>
-                <input type="text">
+                <input type="text" name="unirme" placeholder="Encontrar">
                 <br> <br>
                 <input type="submit" class="  btn btn-primary" name="accion" value="IR">
             </div>

@@ -25,6 +25,10 @@ $respuesta = $con->query($consulta);
 
 //SI SE LOGRA LA INSERCION DE DATOS A LA BASE DE DATOS, LO DIRIGE A LA SALA DE ESPERA
 if($respuesta==1){
+
+   
+    session_start();
+    $_SESSION['codigo_hex']= $codigo;
     header("location:salaespera.php");
 }else{
 
